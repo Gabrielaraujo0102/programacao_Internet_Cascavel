@@ -1,0 +1,17 @@
+table{
+    width: 600px;
+    border-collapse: collapse;
+}
+
+td{
+    width: 100px;
+}
+
+.tituloTabela{
+    background-color: #0D5188;
+    color: white;
+}
+
+.colunas{
+    background-color: #66C5E3;
+}
