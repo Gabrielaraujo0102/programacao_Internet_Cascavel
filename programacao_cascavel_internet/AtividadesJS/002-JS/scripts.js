@@ -4,11 +4,11 @@
     let resultado = document.querySelector("#resultado");
 
 function calcularTroco(){
-    let valorPago = Number(valorPago.value);
-    let precoProduto = Number(precoProduto.value);
+    let Pago = Number(valorPago.value);
+    let Preco = Number(precoProduto.value);
 
-    let valorFinal = valorPago - precoProduto
-    resultado.textContent = valorFinal
+    let valorfinal = Pago - Preco
+    resultado.value = valorfinal;
 }
 
 btTroco.onclick = function(){
