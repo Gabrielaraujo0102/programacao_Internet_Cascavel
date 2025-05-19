@@ -4,11 +4,14 @@
     </head>
     <body>
         <h1>Reajuste de Saldo 1%</h1>
-        <label type="text" id="num1"></label>
-        <br>
-        <label type="text" for="saldo">Informe o saldo: R$</label>
+        <label for="num1">Informe o saldo: R$</label>
+        <input type="text" id="num1">
+        <br><br>
+        <label >Saldo com reajustes: R$</label>
+        <span id="saldo"></span>
+        <br><br>
         <button onclick="reajustarSaldo()" id="btReajuste">Calcular reajuste</button>
-        <input type="text" id="resultado">
+        <label for="resultado"></label>
     </body>
     <script src="scripts.js"></script>
 </html>
