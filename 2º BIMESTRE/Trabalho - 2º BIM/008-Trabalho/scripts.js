@@ -19,5 +19,5 @@ function calcularSalario() {
     }
 
     let salario = valorHora * horas * 4.5;
-    resultado.value = `Salário: R$${salario.toFixed(2)}`;
+    resultado.value = "Salário: R$" + salario.toFixed(2);
 }

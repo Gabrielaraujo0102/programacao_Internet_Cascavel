@@ -1,23 +1,43 @@
-let sabor1 = document.querySelector("#sabor1");
-let sabor2 = document.querySelector("#sabor2");
-let sabor3 = document.querySelector("#sabor3");
-let sabor4 = document.querySelector("#sabor4");
-let refri = document.querySelector("#refri");
-let btCalcular = document.querySelector("#btCalcular");
-let resultado = document.querySelector("#resultado");
+let inputSabor1 = document.querySelector("#inputSabor1");
+let inputSabor2 = document.querySelector("#inputSabor2");
+let inputSabor3 = document.querySelector("#inputSabor3");
+let inputSabor4 = document.querySelector("#inputSabor4");
+let inputRefri = document.querySelector("#inputRefri");
+let btFinalizar = document.querySelector("#btFinalizar");
+let resumoPedido = document.querySelector("#resumoPedido");
 
-function calcular() {
-    let sabores = [sabor1.value, sabor2.value, sabor3.value, sabor4.value];
-    let qtdRefri = Number(refri.value);
+function geraPedidoPizza(){
 
-    let total = (sabores.length * 12) + (qtdRefri * 7);
+    let qtdRefri = 0;
+    let qtdSabor = 0;
+    let sabores = "Sabores selecionados:<br>";
 
-    resultado.innerHTML = 
-        "Sabores escolhidos:<br>" +
-        sabores.join("<br>") + "<br>" +
-        "Total a pagar: R$ " + total.toFixed(2);
+    if(inputSabor1.value != ""){
+        qtdSabor = qtdSabor + 1;
+        sabores = sabores + inputSabor1.value+"<br>";
+    }
+    if(inputSabor2.value != ""){
+        qtdSabor = qtdSabor + 1;
+        sabores = sabores + inputSabor2.value+"<br>";
+    }
+    if(inputSabor3.value != ""){
+        qtdSabor = qtdSabor + 1;
+        sabores = sabores + inputSabor3.value+"<br>";
+    }
+    if(inputSabor4.value != ""){
+        qtdSabor = qtdSabor + 1;
+        sabores = sabores + inputSabor4.value+"<br>";
+    }
+    qtdRefri = Number(inputRefri.value) * 7;
+
+    resumoPedido.innerHTML = sabores+
+                            "Total Pizza: R$"+(qtdSabor * 12).toFixed(2)+"<hr>"+
+                            "Quantidade de Refrigerante: "+inputRefri.value+"<br>"+
+                            "Total Refrigerante: R$"+qtdRefri.toFixed(2)+"<hr>"+
+                            "Total do Pedido R$"+((qtdSabor * 12)+qtdRefri).toFixed(2)+"<hr>"
+
 }
 
-btCalcular.onclick = function(){
-    calcular();
+btFinalizar.onclick = function(){
+    geraPedidoPizza();
 }
