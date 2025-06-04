@@ -1,6 +1,7 @@
 let preco = document.querySelector("#preco");
 let condicao = document.querySelector("#condicao");
 let resultado = document.querySelector("#resultado");
+let calcular = document.querySelecotr("#resultado");
 
 function calcularPagamento() {
     let valor = Number(preco.value);
@@ -20,5 +21,9 @@ function calcularPagamento() {
         return;
     }
 
-    resultado.value = `Total a pagar: R$${total.toFixed(2)}`;
+    resultado.value = "Total a pagar: R$" + total.toFixed(2);
+}
+
+calcular.onclick = function(){
+    calcularPagamento();
 }

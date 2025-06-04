@@ -1,14 +1,15 @@
 <html>
 <head>
     <title>Crédito Bancário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Calculadora de Crédito</h1>
-    <input type="text" placeholder="Saldo Médio" id="saldoMedio">
+<body class="body">
+    <h1 class="titulo">Calculadora de Crédito</h1>
+    <input class="input" type="text" placeholder="Saldo Médio" id="saldoMedio">
     <br><br>
-    <button onclick="calcularCredito()">Calcular Crédito</button>
+    <button class="button" onclick="calcularCredito()" id="calcular">Calcular Crédito</button>
     <br><br>
-    <input type="text" id="resultado" readonly>
+    <input class="resultado" type="text" id="resultado" readonly>
 </body>
-<script src="credito.js"></script>
+<script src="scripts.js"></script>
 </html>
